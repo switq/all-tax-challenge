@@ -7,6 +7,7 @@ export const HomeContainer = styled.div`
     background-color: #f5f5f5;
     min-height: 100vh;
     justify-content: space-between;
+    overflow-x: hidden;
 `;
 
 export const TopContent = styled.div`
