@@ -1,6 +1,7 @@
 import { Chart } from "react-chartjs-2";
+import ChartJs from 'chart.js/auto';
 import { chartOptions } from "./options";
-import { BarElement, CategoryScale, Chart as ChartJs, ChartData, Filler, Legend, LinearScale, LineElement, PointElement, scales, Title, Tooltip } from "chart.js";
+import { BarElement, CategoryScale, ChartData, Filler, Legend, LinearScale, LineElement, PointElement, scales, Title, Tooltip } from "chart.js";
 import { useContext } from "react";
 import { ChartInfoContext } from "../../contexts/ChartInfo/ChartInforContext";
 import { useSelector } from "react-redux";
