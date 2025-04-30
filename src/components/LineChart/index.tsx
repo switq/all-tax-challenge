@@ -1,6 +1,6 @@
-import { Bar } from "react-chartjs-2";
+import { Chart } from "react-chartjs-2";
 import { chartOptions } from "./options";
-import { BarElement, CategoryScale, Chart, ChartData, Filler, Legend, LinearScale, LineElement, PointElement, scales, Title, Tooltip } from "chart.js";
+import { BarElement, CategoryScale, Chart as ChartJs, ChartData, Filler, Legend, LinearScale, LineElement, PointElement, scales, Title, Tooltip } from "chart.js";
 import { useContext } from "react";
 import { ChartInfoContext } from "../../contexts/ChartInfo/ChartInforContext";
 import { useSelector } from "react-redux";
@@ -9,7 +9,7 @@ import ChartDataLabels from "chartjs-plugin-datalabels";
 import ToggleBar from "./ToggleBar";
 import { ChartContainer } from "./styles";
 
-Chart.register(
+ChartJs.register(
     CategoryScale,
     LinearScale,
     BarElement,
@@ -36,7 +36,8 @@ function LineChart() {
     return (
         <>
             <ChartContainer>
-                <Bar
+                <Chart
+                    type={chartType}
                     options={chartOptions()}
                     plugins={[ChartDataLabels]}
                     data={{
