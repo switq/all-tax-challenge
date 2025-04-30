@@ -5,7 +5,7 @@ interface Props {
 }
 
 const initialState = {
-  chartType: "line"
+  chartType: "bar"
 } as Props;
 
 const appPreferencesSlice = createSlice({
