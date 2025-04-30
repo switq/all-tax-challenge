@@ -16,6 +16,7 @@ Projeto para exibir relatórios de vendas com gráficos interativos, permitindo 
 
 1. **Clone o repositório**:
    ```bash
-   git clone <URL_DO_REPOSITORIO>
+   git clone https://github.com/switq/all-tax-challenge.git
    cd all-tax-challenge
    ```
+
