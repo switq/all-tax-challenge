@@ -3,17 +3,19 @@ import LineChart from "../../components/LineChart";
 import SelectList from '../../components/SelectList';
 import { ChartInfoProvider } from '../../contexts/ChartInfo/ChartInfoProvider';
 import Footer from '../../components/Footer';
-import { HomeContainer } from "./styles";
+import { HomeContainer, TopContent } from "./styles";
 
 
 function Home() {
     return (
         <HomeContainer>
-            <Header />
-            <ChartInfoProvider>
-                <SelectList />
-                <LineChart />
-            </ChartInfoProvider>
+            <TopContent>
+                <Header />
+                <ChartInfoProvider>
+                    <SelectList />
+                    <LineChart />
+                </ChartInfoProvider>
+            </TopContent>
             <Footer />
         </HomeContainer>
     );
