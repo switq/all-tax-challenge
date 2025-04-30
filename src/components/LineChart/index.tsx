@@ -42,7 +42,7 @@ function LineChart() {
                     options={chartOptions()}
                     plugins={[ChartDataLabels]}
                     data={{
-                        labels: ["Janeiro", "Fevereiro", "Abril", "Maio"],
+                        labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
                         datasets: [{
                             data,
                             label,
