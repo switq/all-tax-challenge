@@ -1,6 +1,8 @@
 # Sales Report
 
 Projeto para exibir relatórios de vendas com gráficos interativos, permitindo filtrar por categorias, produtos e marcas.
+🔗 Acesse o projeto online:
+[https://all-tax-challenge-78qk40xu9-switqs-projects.vercel.app]
 
 ## Tecnologias Utilizadas
 
@@ -18,5 +20,8 @@ Projeto para exibir relatórios de vendas com gráficos interativos, permitindo 
    ```bash
    git clone https://github.com/switq/all-tax-challenge.git
    cd all-tax-challenge
+   
+   npm install
+   npm run build
    ```
 
