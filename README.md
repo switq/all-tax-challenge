@@ -17,5 +17,5 @@ Este é um projeto desenvolvido para exibir relatórios de vendas utilizando gr�
 
 1. **Clone o repositório**:
    ```bash
-   git clone <URL_DO_REPOSITORIO>
+   git clone https://github.com/switq/all-tax-challenge.git
    cd all-tax-challenge
