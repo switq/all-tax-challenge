@@ -1,6 +1,7 @@
 # Sales Report
 
 Projeto para exibir relatórios de vendas com gráficos interativos, permitindo filtrar por categorias, produtos e marcas.
+
 🔗 Acesse o projeto online:
 [https://all-tax-challenge.vercel.app/]
 
