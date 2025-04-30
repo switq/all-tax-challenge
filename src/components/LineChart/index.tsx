@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import ToggleBar from "./ToggleBar";
+import { ChartContainer } from "./styles";
 
 Chart.register(
     CategoryScale,
@@ -19,8 +20,7 @@ Chart.register(
     scales,
     Filler,
     PointElement,
-
-)
+);
 
 function LineChart() {
     const context = useContext(ChartInfoContext);
@@ -29,17 +29,18 @@ function LineChart() {
     }
 
     const brand = useSelector((state: RootState) => state.brands.brands.find((brand) => brand.id === context.selectedBrand));
+    const chartType = useSelector((state: RootState) => state.appPreferences.chartType);
     const data = [...(brand?.sales ? brand.sales : [])];
-    const label = brand?.name
+    const label = brand?.name;
 
     return (
         <>
-            <div style={{ height: "60vh", maxHeight: "500px", width: "60vw", maxWidth: "800px" }}>
+            <ChartContainer>
                 <Line
                     options={chartOptions()}
                     plugins={[ChartDataLabels]}
                     data={{
-                        labels: ["Janeiro", "Fevereiro", "Abril", "Maio",],
+                        labels: ["Janeiro", "Fevereiro", "Abril", "Maio"],
                         datasets: [{
                             data,
                             label,
@@ -47,11 +48,11 @@ function LineChart() {
                             pointRadius: 4,
                             borderColor: "#3b69b9ca",
                             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                            type: "bar" as any,
-                        },]
+                            type: chartType as any,
+                        }]
                     }}
                 />
-            </div>
+            </ChartContainer>
             <ToggleBar />
         </>
     );

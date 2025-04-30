@@ -3,7 +3,7 @@ import { HeaderContainer } from "./styles";
 function Header() {
     return (
         <HeaderContainer>
-            <h1>Welcome to Sales Report</h1>
+            <h1>Bem vindo(a) ao Sales Report!</h1>
         </HeaderContainer>
     );
 }

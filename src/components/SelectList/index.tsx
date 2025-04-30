@@ -1,22 +1,10 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import styled from "styled-components";
 import { useSelector } from "react-redux";
 import SelectItem, { SelectItemProps } from "./SelectItem";
 import { RootState } from "../../store";
 import { useContext } from "react";
 import { ChartInfoContext } from "../../contexts/ChartInfo/ChartInforContext";
+import { SelectListContainer } from "./styles";
 
-const SelectListContainer = styled.div`
-    display: flex;
-    flex-direction: row; /* Alinha os selects lateralmente */
-    gap: 16px;
-    padding: 16px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 100%;
-    justify-content: center;
-    overflow-x: auto; /* Permite rolagem horizontal caso necessário */
-`;
 
 function SelectList() {
     const context = useContext(ChartInfoContext);
@@ -30,6 +18,7 @@ function SelectList() {
     const brands = useSelector((state: RootState) => state.brands.brands)
         .filter(brand => brand.category === context.selectedCategory && brand.product === context.selectedProduct);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const mapToIdAndName = (items: any[]) => {
         return items.map(item => ({
             id: item.id,
